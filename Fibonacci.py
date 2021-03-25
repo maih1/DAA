@@ -16,4 +16,4 @@ timeEnd = time.time()
 
 time = timeEnd - timeStart
 
-print("Thoi gian:", time)
+print("Thoi gian:", time, 's')
