@@ -1,3 +1,6 @@
+import random
+import time
+
 def minMax(a, l, r):
     if (r - l) <= 1:
         a1 = a[l]
@@ -10,7 +13,27 @@ def minMax(a, l, r):
 
         return (min(x[0], y[0]), max(x[1], y[1]))
 
-a = [3, 5, 2, 60, -3, 9, 12, 1, 5, 70, 23, 23, 2]
+def inputArray(n):
+    a = []
+    
+    for i in range(n):
+        a.append(random.randint(1000, 10000))
 
-result = minMax(a, 0, len(a) - 1)
-print(result)
+    return a
+
+if __name__ == '__main__':
+    
+    n = int(input("Nhap so phan tu cua mang: "))    
+
+    array = inputArray(n)
+
+    print("Mang array: ", array)
+
+    timeStart = time.time()
+    result = minMax(array, 0, len(array) - 1)
+    timeEnd = time.time()
+
+    time = timeEnd - timeStart
+
+    print("Min: {}, Max: {}".format(result[0], result[1]))
+    print("Time:", round(time, 6))
