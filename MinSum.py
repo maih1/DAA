@@ -1,6 +1,6 @@
 import math
 
-0def dist(p1, p2):
+def dist(p1, p2):
     return math.sqrt((p1[0] - p2[0])*(p1[0] - p2[0]) + (p1[1] - p2[1])*(p1[1] - p2[1]))
 
 def cost(points, n, m, k):
